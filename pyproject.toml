@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "test-work"
+version = "0.1.0"
+description = ""
+authors = ["root <admin@example.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+pydantic = "^2.5.3"
+sqlalchemy = "^2.0.25"
+fastapi = "^0.109.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

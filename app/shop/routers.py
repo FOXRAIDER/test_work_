@@ -12,5 +12,5 @@ router = APIRouter(
     "/",
     summary="Get all items",
 )
-async def get_all(self):
+async def get_all():
     pass

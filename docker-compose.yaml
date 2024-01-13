@@ -11,3 +11,16 @@ services:
     container_name: database
     ports:
       - 5555:5432
+    env_file:
+      - ./app/db/.env
+
+  app:
+    build:
+      context: .
+      dockerfile: ./app/Dockerfile
+    container_name: app
+    ports:
+      - 8000:8000
+    depends_on:
+      - redis
+      - database

@@ -15,7 +15,7 @@ section = config.config_ini_section
 config.set_section_option(section, "POSTGRES_USER", DATABASE.user)
 config.set_section_option(section, "POSTGRES_PASSWORD", DATABASE.password)
 config.set_section_option(section, "POSTGRES_HOST", DATABASE.host)
-config.set_section_option(section, "POSTGRES_PORT", DATABASE.port)
+config.set_section_option(section, "POSTGRES_PORT", str(DATABASE.port))
 config.set_section_option(section, "POSTGRES_DB", DATABASE.db)
 
 # Interpret the config file for Python logging.
@@ -28,7 +28,7 @@ if config.config_file_name is not None:
 # from myapp import mymodel
 # target_metadata = mymodel.Base.metadata
 target_metadata = [
-    shop_models_Base,
+    shop_models_Base.metadata,
 ]
 
 # other values from the config, defined by the needs of env.py,

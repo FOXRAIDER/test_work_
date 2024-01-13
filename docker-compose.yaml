@@ -1,0 +1,13 @@
+version: '3.8'
+services:
+  redis:
+    image: redis
+    container_name: redis
+    ports:
+      - 6666:6379
+
+  database:
+    image: postgres:latest
+    container_name: database
+    ports:
+      - 5555:5432
